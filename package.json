@@ -1,12 +1,15 @@
 {
   "name": "next-fe-helpers",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collection of development helpers for Next.js applications including grid overlay and stats display",
   "keywords": [
     "next.js",
+    "react",
     "stats",
     "grid",
-    "helpers"
+    "helpers",
+    "development",
+    "frontend"
   ],
   "homepage": "https://github.com/YassineGallaoui/next-fe-helpers#readme",
   "bugs": {
@@ -18,9 +21,36 @@
   },
   "license": "ISC",
   "author": "Yassine Gallaoui",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "next": ">=13.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
   }
 }
