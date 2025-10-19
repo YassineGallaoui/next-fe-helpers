@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import "./styles.scss";
 
 const GridHelper = () => {
   const gridOverlayRef = useRef<HTMLDivElement | null>(null);
@@ -29,7 +30,6 @@ const GridHelper = () => {
     <div ref={gridOverlayRef} className={overlayClassName}>
       <div className="container">
         <div className="row">
-          {/* No individual columns are created in grid.js logic */}
         </div>
       </div>
     </div>

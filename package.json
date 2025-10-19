@@ -1,6 +1,6 @@
 {
   "name": "next-fe-helpers",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A collection of development helpers for Next.js applications including grid overlay and stats display",
   "keywords": [
     "next.js",
@@ -22,35 +22,41 @@
   "license": "ISC",
   "author": "Yassine Gallaoui",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/next-fe-helpers.umd.js",
+  "module": "dist/next-fe-helpers.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/next-fe-helpers.es.js",
+      "require": "./dist/next-fe-helpers.umd.js",
       "types": "./dist/index.d.ts"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "vite build",
+    "dev": "vite build --watch",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
+    "next": ">=13.0.0",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0",
-    "next": ">=13.0.0"
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "typescript": "^5.0.0"
+    "@vitejs/plugin-react": "^4.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.69.0",
+    "typescript": "^5.0.0",
+    "vite": "^4.5.0",
+    "vite-plugin-dts": "^3.6.0"
   }
 }

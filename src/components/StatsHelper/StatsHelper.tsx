@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import "./styles.scss";
 
 const StatsHelper = () => {
   const statsOverlay = useRef<HTMLDivElement | null>(null);
@@ -32,7 +33,7 @@ const StatsHelper = () => {
     };
   }, [statsOverlay]);
 
-  return <div ref={statsOverlay} className="stats z-50"></div>;
+  return <div ref={statsOverlay} className="stats"></div>;
 };
 
 export default StatsHelper;

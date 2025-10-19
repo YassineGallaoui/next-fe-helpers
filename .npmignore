@@ -1,9 +1,0 @@
-src/
-tsconfig.json
-.git/
-.gitignore
-*.log
-.DS_Store
-.env*
-coverage/
-.nyc_output/

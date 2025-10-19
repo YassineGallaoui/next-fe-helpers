@@ -1,0 +1,37 @@
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+// Theme Colors light mode
+:root {
+  --background-color: #ebecd6;
+  --foreground-color: #0a100d;
+  --accent-color: #3066be;
+}
+
+// Theme Colors dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0a100d;
+    --foreground-color: #ebecd6;
+    --accent-color: #3066be;
+  }
+}
+
+// Breakpoints
+$breakpoint-sm: 577px;
+$breakpoint-md: 769px;
+$breakpoint-lg: 993px;
+$breakpoint-xl: 1201px;
+$breakpoint-xxl: 1441px;
+
+// Spacing
+$spacing-unit: 8px;
+$container-padding: 15px;
+
+// Grid columns
+$grid-columns-sm: 4;
+$grid-columns-md: 8;
+$grid-columns-lg: 12;

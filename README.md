@@ -8,6 +8,14 @@ A collection of development helpers for Next.js applications including grid over
 npm install next-fe-helpers
 ```
 
+## Setup
+
+Import the CSS file in your Next.js project. Add this to your `_app.tsx` or `layout.tsx`:
+
+```tsx
+import 'next-fe-helpers/dist/style.css';
+```
+
 ## Components
 
 ### StatsHelper
@@ -42,6 +50,7 @@ A component that provides a visual grid overlay for layout development.
 - Visual grid overlay
 - Toggles with 'G' key
 - Bootstrap-style container and row structure
+- Responsive grid (4 columns on mobile, 8 on tablet, 12 on desktop)
 
 **Usage:**
 ```tsx
@@ -61,6 +70,7 @@ export default function MyApp() {
 
 ```tsx
 import { StatsHelper, GridHelper } from 'next-fe-helpers';
+import 'next-fe-helpers/dist/style.css';
 
 export default function MyApp() {
   return (
@@ -83,80 +93,27 @@ export default function MyApp() {
 - React >=18.0.0
 - Next.js >=13.0.0
 
-## CSS Classes
+## Styling
 
-The components use the following CSS classes that you should style in your application:
+The components come with pre-compiled CSS that includes:
 
-### StatsHelper Classes
-- `.stats`: Main stats container
-- `.stats.show`: Visible state for stats
+### StatsHelper
+- Fixed positioning in the top-right corner
+- Dark overlay with blur effect
+- Monospace font for consistent display
+- Responsive design
 
-### GridHelper Classes
-- `.grid-overlay`: Main overlay container
-- `.grid-overlay.show`: Visible state for grid
-- `.container`: Grid container
-- `.row`: Grid row
+### GridHelper
+- Full-screen overlay
+- Color-coded column visualization
+- Responsive breakpoints (mobile: 4 cols, tablet: 8 cols, desktop: 12 cols)
+- Semi-transparent background
 
-## Example CSS
-
-```css
-/* StatsHelper styles */
-.stats {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 10px;
-  border-radius: 4px;
-  font-family: monospace;
-  font-size: 12px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.stats.show {
-  opacity: 1;
-}
-
-.stats span {
-  display: block;
-}
-
-/* GridHelper styles */
-.grid-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.grid-overlay.show {
-  opacity: 1;
-}
-
-.grid-overlay .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent calc(8.333% - 1px),
-    rgba(255, 0, 0, 0.1) calc(8.333% - 1px),
-    rgba(255, 0, 0, 0.1) 8.333%
-  );
-}
-```
+The CSS is automatically included when you import the stylesheet. All styles are scoped to prevent conflicts with your application.
 
 ## Development
 
-This package is designed specifically for development environments. The components include console.log statements and are not optimized for production use.
+This package is designed specifically for development environments. The components include helpful features for layout and responsive design testing.
 
 ## License
 
