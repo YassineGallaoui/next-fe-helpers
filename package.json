@@ -1,0 +1,26 @@
+{
+  "name": "next-fe-helpers",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "next.js",
+    "stats",
+    "grid",
+    "helpers"
+  ],
+  "homepage": "https://github.com/YassineGallaoui/next-fe-helpers#readme",
+  "bugs": {
+    "url": "https://github.com/YassineGallaoui/next-fe-helpers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YassineGallaoui/next-fe-helpers.git"
+  },
+  "license": "ISC",
+  "author": "Yassine Gallaoui",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
