@@ -1,6 +1,6 @@
 {
   "name": "next-fe-helpers",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A collection of development helpers for Next.js applications including grid overlay and stats display",
   "keywords": [
     "next.js",

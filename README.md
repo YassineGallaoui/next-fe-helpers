@@ -95,6 +95,6 @@ export default FEHelpers;
 
 ISC
 
-## Repository
+## Author
 
-[GitHub Repository](https://github.com/YassineGallaoui/next-fe-helpers)
+Yassine Gallaoui
