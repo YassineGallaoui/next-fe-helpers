@@ -19,7 +19,7 @@ const y = () => {
   const e = d(null);
   return a(() => {
     const n = e.current;
-    n.innerHTML = `<span>${window.innerWidth} x ${window.innerHeight}</span>
+    n.innerHTML = `<span>W:${window.innerWidth} x H:${window.innerHeight}</span>
                             <span>Aspect ratio: ${(window.innerWidth / window.innerHeight).toFixed(2)}</span>`;
     const t = () => {
       console.log("resize"), n.innerHTML = `<span>${window.innerWidth} x ${window.innerHeight}</span>
