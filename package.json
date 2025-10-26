@@ -1,6 +1,6 @@
 {
   "name": "next-fe-helpers",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A collection of development helpers for Next.js applications including grid overlay and stats display",
   "keywords": [
     "next.js",
@@ -41,7 +41,6 @@
     "build": "vite build",
     "dev": "vite build --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "prepare": "npm run build",
     "release": "npm version patch -m \"chore: release v%s\" && npm publish --access public",
     "release:minor": "npm version minor -m \"feat: release v%s\" && npm publish --access public",
