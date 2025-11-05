@@ -473,7 +473,7 @@ const StatsHelper = () => {
   }, []);
 
   const handleKeyPress = useCallback((e: KeyboardEvent) => {
-    if (e.key.toLowerCase() === "s") {
+    if (e.altKey && e.code === 'KeyS') {
       setIsVisible(prev => !prev);
     }
   }, []);

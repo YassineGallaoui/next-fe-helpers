@@ -12,7 +12,7 @@ const GridHelper = () => {
     if (!overlayElement) return;
 
     const keydownHandler = (e: KeyboardEvent) => {
-      if (e.key.toLowerCase() === "g") {
+      if (e.altKey && e.code === 'KeyG') {
         setIsVisible((prev) => !prev);
       }
     };
