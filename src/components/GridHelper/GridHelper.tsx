@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import "./styles.scss";
+import type { GridHelperProps } from "./types";
 
-const GridHelper = () => {
+const GridHelper: React.FC<GridHelperProps> = ({ show = false }) => {
   const gridOverlayRef = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(show);
 
   useEffect(() => {
     const overlayElement = gridOverlayRef.current;
@@ -24,7 +25,12 @@ const GridHelper = () => {
     };
   }, []);
 
-  const overlayClassName = `grid-overlay ${isVisible ? "show" : ""}`.trim();
+  // Sync internal visibility state with show prop
+  useEffect(() => {
+    setIsVisible(show);
+  }, [show]);
+
+  const overlayClassName = `grid-overlay ${isVisible ? " show" : ""}`.trim();
 
   return (
     <div ref={gridOverlayRef} className={overlayClassName}>

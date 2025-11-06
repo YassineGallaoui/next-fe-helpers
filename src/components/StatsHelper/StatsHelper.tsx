@@ -17,6 +17,7 @@ import type {
   StatLineProps,
   StatSectionProps,
   StatsControlsProps,
+  StatsHelperProps,
   StatsPosition,
   ThemeInfo,
   ThemeStatsProps
@@ -254,9 +255,9 @@ const BrowserStats: React.FC<BrowserStatsProps> = ({ browserInfo }) => (
   </StatSection>
 );
 
-const StatsHelper = () => {
+const StatsHelper: React.FC<StatsHelperProps> = ({ show = false }) => {
   // React state for all dynamic values
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(show);
   const [position, setPosition] = useState<StatsPosition>('tl');
   
   // Stats data state
@@ -515,12 +516,17 @@ const StatsHelper = () => {
     updateDisplayInfo();
   }, [updateDisplayInfo]);
 
+  // Sync internal visibility state with show prop
+  useEffect(() => {
+    setIsVisible(show);
+  }, [show]);
+
   if (!isVisible) {
     return null;
   }
 
   return (
-    <div className={`stats show pos-${position}`}>
+    <div className={`stats pos-${position} ${isVisible ? ' show' : ''}`}>
       <StatsControls 
         position={position}
         onPositionChange={handlePositionChange}

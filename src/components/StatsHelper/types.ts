@@ -86,3 +86,8 @@ export interface DeviceStatsProps {
 export interface BrowserStatsProps {
   browserInfo: BrowserInfo;
 }
+
+// Main StatsHelper props
+export interface StatsHelperProps {
+  show?: boolean;
+}
