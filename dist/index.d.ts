@@ -1,5 +1,3 @@
-import { JSX as JSX_2 } from 'react/jsx-runtime';
-
 export declare interface BrowserInfo {
     engine: string;
     gpu: string;
@@ -37,7 +35,15 @@ export declare interface FrameInfo {
     animationFrameJitter: number;
 }
 
-export declare const GridHelper: () => JSX_2.Element;
+export declare const GridHelper: React.FC<GridHelperProps>;
+
+declare interface GridHelperProps {
+    show?: boolean;
+    columnsColor?: string;
+    columnsBorderColor?: string;
+    columnsBorderWidth?: string;
+    columnsBorderStyle?: string;
+}
 
 export declare interface InfoIconProps {
     tooltip: string;
@@ -75,7 +81,11 @@ export declare interface StatSectionProps {
     children: React.ReactNode;
 }
 
-export declare const StatsHelper: () => JSX_2.Element | null;
+export declare const StatsHelper: React.FC<StatsHelperProps>;
+
+declare interface StatsHelperProps {
+    show?: boolean;
+}
 
 export declare type StatsPosition = 'tl' | 'tr' | 'bl' | 'br';
 
